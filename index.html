@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Alarm CLock" />
+    <meta property="og:image" itemprop="image"
+        content="https://sumitkcs.github.io/alarm-clock/assets/img/meta-preview.png" />
+    <meta property="og:image:alt"
+        content="An alarm clock built using HTML, CSS and JavaScript. Click to visit website." />
+    <meta property="og:description" content="Project by Er. Sumit Kumar" />
+    <meta property="og:url" content="https://sumitKcs.github.io/alarm-clock/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta name="twitter:card" content="summary" />
+    <meta name="description" content="A constellation efffect animation app. Click to visit website." />
+    <meta name="theme-color" content="#000000" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, alarm Clock, digital clock, clock" />
+    <meta name="author" content="Er. Sumit Kumar" />
+    <title>Alarm Clock</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="canonical" href="https://sumitKcs.github.io/alarm-clock" />
+    <script type="module" defer src="assets/js/app.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <audio id="theme" src="assets/audio/theme.mp3" loop></audio>
+
+</head>
+
+<body>
+    <!-- analog clock  -->
+    <div class="clock-container">
+        <div class="clock">
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand minute" data-minute-hand></div>
+            <div class="hand second" data-second-hand></div>
+            <div class="number number1"> <span class="text">1</span> </div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+        </div>
+    </div>
+    <!-- digital clock  -->
+    <div class="digital-clock-container" id="digital-clock">
+        <div class="time hour" data-hour-time>hr</div>:
+        <div class="time minute" data-minute-time>mins</div>:
+        <div class="time second" data-second-time>secs</div>
+        <div class="time meridiem" data-meridiem-time>AM</div>
+    </div>
+    <!-- alarm section  -->
+    <div class="alarm-container">
+        <div class="select-container" id="select-container">
+            <div class="alarm hour container">
+                <select name="alarm-hour" id="select-alarm-hour">
+                    <option value="" selected hidden>Hrs</option>
+                </select>
+            </div>
+            <div class="alarm minute container">
+                <select name="alarm-minute" id="select-alarm-minute">
+                    <option value="" selected hidden>Min</option>
+
+                </select>
+            </div>
+            <div class="alarm meridiem container">
+                <select name="alarm-meridiem" id="select-alarm-meridiem">
+                    <option value="" selected hidden>AM/PM</option>
+                </select>
+            </div>
+        </div>
+        <div class="select-container alarm-screen" id="alarm-container">
+            <div id="alarm-text">Alarm at</div>
+            <div id="alarm-hour">04</div>:
+            <div id="alarm-minute">25</div>
+            <div id="alarm-meridiem">PM</div>
+        </div>
+
+        <div class="button set-button" id="alarm-button">Set Alarm</div>
+        <div class="button cancel-button" id="alarm-cancel-button">Stop Alarm</div>
+
+    </div>
+    <!-- modal  -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-message"><span id="modal-text"> Alarm available for</span><span id="modal-time">
+                    02:35 PM</span> </div>
+            <div class="button-container">
+                <div class="modal-button modal-stop" id="modal-stop-button">stop</div>
+                <div class="modal-button modal-keep" id="modal-keep-button">keep</div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
